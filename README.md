@@ -7,3 +7,7 @@ Load your website with the following query string parameter: ?key=key&value=valu
 E.g. https://mysite.com?key=key&value=value
 
 Add functionality to push the key and value to the GTM data layer.
+
+
+----------------------------------------------------------------------------------------
+
