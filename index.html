@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script>
-
+//Part1 Code
 console.log('test1');
 const testParameters = 'key=key&value=value';
 const x = new URLSearchParams(testParameters);
@@ -21,6 +21,15 @@ const x = new URLSearchParams(testParameters);
 return x;
 console.log(testParameters);
 console.log('endTest');
+  
+</script>
+
+<script>
+  //Part 2 Code
+
+function testAPI(){
+  console.log('this is working');
+}
   
 </script>
 
@@ -59,5 +68,19 @@ This is for part 1: <br>
 3. Not Yet <br>
 
 
+------------------------------------------------------------------------------------------------------------------ <br>
 </h5>
+  
+<h4>API Implementation </h4> <br>
+
+<h5>
+1. Add a button to your page that sends a GET API request using http://httpbin.org/ <br>
+
+2. The API call should use the query string parameters stored in the GTM data layer (from task 1) as key-value pairs sent to the GET request.  E.g. https://httpbin.org/get?key=key&value=value <br>
+
+3. Log the response in the console. <br>
+
+</h5>
+
+<button type='button' onclick='testAPI()'> CLICK HERE for 2.1  </button>
 </body>
