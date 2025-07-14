@@ -5,17 +5,16 @@
 <script>
 
 var redirectHappened = false;
+if(!redirectHappened){
 
-function redirectPage(){
+  function redirectPage(){
   console.log('redirect starting now');
   window.location.replace('https://c-orta.github.io/?key=key&value=value');
   redirectHappened = true;
-  return redirectHappend;
 }
+}
+redirectPage();
 
-if(!redirectHappened){
-  redirectPage();
-}
 
 
 location.replace('https://c-orta.github.io/?key=key&value=value');
