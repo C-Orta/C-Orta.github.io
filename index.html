@@ -69,14 +69,32 @@ function testAPI(){
 
 
 
-// run dataLayer Button
+
+
+<!-- run dataLayer Button STARTS HERE -->
 
 <script>
   function dataLayerAPIFunction(){
-    console.log('dataLayerButton starting');
+      console.log('dataLayerButton starting');
+
+      var getDataLayer = dataLayer[1];
+      var firstValue = getDataLayer.key;
+      var secondValue = getDataLayer.value;
+  
+      var newAPIString = 'https://httpbin.org/get' + '?' + 'key=' + firstValue + '&' + 'value=' + secondValue;
+      console.log(newAPIString);
+    
   };
   
 </script>
+
+
+<!-- run dataLayer Button DONE HERE-->
+
+
+
+
+
 
 </head>
 
