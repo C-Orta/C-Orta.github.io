@@ -10,12 +10,14 @@
 // }
 
 
-setTimeout(()=> {
-  window.location.replace('?key=key&value=value');
-}, "1000");
+// setTimeout(()=> {
+//   window.location.replace('?key=key&value=value');
+// }, "1000");
   
 
-
+const url = new URL(window.location);
+url.searchParams.set('key','key');
+window.History.pushState({},'',url)
 
 </script>
 
