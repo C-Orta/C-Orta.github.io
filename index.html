@@ -14,10 +14,11 @@
 //   window.location.replace('?key=key&value=value');
 // }, "1000");
   
-
+console.log('starting here')
 const url = new URL(window.location);
-url.searchParams.set('key','key');
+url.searchParams.set('key','value');
 window.History.pushState({},'',url)
+console.log('ending here')
 
 </script>
 
