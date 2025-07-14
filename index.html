@@ -74,15 +74,32 @@ function testAPI(){
 <!-- run dataLayer Button STARTS HERE -->
 
 <script>
-  function dataLayerAPIFunction(){
-      console.log('dataLayerButton starting');
+  async function dataLayerAPICall(){
+    console.log('-------------Running the dataLayerAPICall function---------------');
 
       var getDataLayer = dataLayer[1];
       var firstValue = getDataLayer.key;
       var secondValue = getDataLayer.value;
   
       var newAPIString = 'https://httpbin.org/get' + '?' + 'key=' + firstValue + '&' + 'value=' + secondValue;
-      console.log(newAPIString);
+      console.log('--------------> This is the new API call: ' + newAPIString);
+    
+    const runBin = newAPIString;
+    try{
+      const responseDataLayerCall = await fetch(runBin);
+      if (!responseDataLayerCall.ok){
+        throw new Error('Response status: ${responseDataLayerCall.status}');
+      }
+    
+    const responseDataLayerCallJSON = await responseDataLayerCall.json();
+    console.log('This is the dataLayer Call JSON:');
+    console.log(responseDataLayerCallJSON);
+    console.log('-----------End of JSON---------');
+    } catch (error){
+      console.error(error.message)
+    }
+  }
+  dataLayerAPICall();
     
   };
   
@@ -155,5 +172,5 @@ This is for part 1: <br>
 
 <button type='button' onclick='testAPI()'> CLICK HERE for 2.1  </button> <br>
 
-<button type='button' onclick='dataLayerAPIFunction()'> dataLayerAPIFunction Button </button>
+<button type='button' onclick='dataLayerAPICall()'> dataLayerAPIFunction Button </button>
 </body>
