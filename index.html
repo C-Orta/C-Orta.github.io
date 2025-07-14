@@ -4,18 +4,10 @@
 
 <script>
 
-var redirectHappened = false;
-if(!redirectHappened){
-
-  function redirectPage(){
-  console.log('redirect starting now');
+let mainPage = window.location.href = 'https://c-orta.github.io/';
+if(mainPage){
   window.location.replace('https://c-orta.github.io/?key=key&value=value');
-  redirectHappened = true;
 }
-}
-redirectPage();
-
-
 
 //location.replace('https://c-orta.github.io/?key=key&value=value');
 //redirect to get the parameters
