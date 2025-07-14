@@ -3,6 +3,20 @@
 <head>
 
 <script>
+
+var redirectHappened = false;
+
+function redirectPage(){
+  console.log('redirect starting now');
+  window.location.replace('https://c-orta.github.io/?key=key&value=value');
+  redirectHappened = true;
+}
+
+if(redirectHappened = false){
+  redirectPage();
+}
+
+
 location.replace('https://c-orta.github.io/?key=key&value=value');
 //redirect to get the parameters
 // try{
