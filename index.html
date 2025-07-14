@@ -5,14 +5,6 @@
 
   
 <script>
-// if(window.location.href != 'https://c-orta.github.io/?key=key&value=value'){
-// window.location.replace('https://c-orta.github.io/?key=key&value=value');
-// }
-
-
-// setTimeout(()=> {
-//   window.location.replace('?key=key&value=value');
-// }, "1000");
   
 console.log('starting here')
 const url = new URL(window.location);
@@ -75,6 +67,17 @@ function testAPI(){
   console.log('pushed dataLayer data');
 </script>
 
+
+
+// run dataLayer Button
+
+<script>
+  function dataLayerAPIFunction(){
+    console.log('dataLayerButton starting');
+  };
+  
+</script>
+
 </head>
 
 
@@ -132,5 +135,7 @@ This is for part 1: <br>
 
 </h5>
 
-<button type='button' onclick='testAPI()'> CLICK HERE for 2.1  </button>
+<button type='button' onclick='testAPI()'> CLICK HERE for 2.1  </button> <br>
+
+<button type='button' onclick='dataLayerAPIFunction()'> dataLayerAPIFunction Button </button>
 </body>
