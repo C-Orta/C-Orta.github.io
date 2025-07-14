@@ -40,7 +40,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   //Part 2 Code
 
 function testAPI(){
-  console.log('this is working');
+  console.log('Running testAPI function');
+  const response = await fetch('https://httpbin.org/get');
+  const responseJSON = response.json();
+  console.log('This is the JSON:');
+  console.log(responseJSON);
+  console.log('End of JSON');
 }
   
 </script>
