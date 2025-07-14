@@ -10,9 +10,10 @@ function redirectPage(){
   console.log('redirect starting now');
   window.location.replace('https://c-orta.github.io/?key=key&value=value');
   redirectHappened = true;
+  return redirectHappend;
 }
 
-if(redirectHappened = false){
+if(!redirectHappened){
   redirectPage();
 }
 
