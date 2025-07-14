@@ -4,8 +4,11 @@
 
 <script>
 //redirect to get the parameters
-window.location.replace('https://c-orta.github.io/?key=key&value=value');
+try{
 console.log('redirect');
+window.location.replace('https://c-orta.github.io/?key=key&value=value');
+} catch(error){console.log('not working)};
+
 </script>
 
 
