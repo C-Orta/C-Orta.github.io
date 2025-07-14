@@ -38,14 +38,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
   //Part 2 Code
+  
+  // using notation from https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch for API call
 
 function testAPI(){
-  console.log('Running testAPI function');
-  const response = fetch('https://httpbin.org/get');
-  const responseJSON = response.json();
-  console.log('This is the JSON:');
-  console.log(responseJSON);
-  console.log('End of JSON');
+  async function runAPICall(){
+    console.log('Running testAPI function');
+    const url = 'https://httpbin.org/get';
+    try{
+      const response = await fetch(url);
+      if (!response.ok){
+        throw new Error('Response status: ${response.status}');
+      }
+    
+    const responseJSON = await response.json();
+    console.log('This is the JSON:');
+    console.log(responseJSON);
+    console.log('End of JSON');
+    } catch (error){
+      console.error(error.message)
+    }
+  }
+  console.log('Done with testAPI function');
 }
   
 </script>
